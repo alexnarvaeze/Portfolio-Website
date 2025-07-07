@@ -152,7 +152,7 @@ a:hover{
 
 /* Sections */
 
-section{
+section {
     padding-top: 4vh;
     height: 96vh;
     margin: 0 10rem;
@@ -160,9 +160,10 @@ section{
     min-height: fit-content;
 }
 
-.section-container{
+.section-container {
     display: flex;
-
+    gap: 3rem;
+    height: 80%;
 }
 
 /* Profile Section */
@@ -276,10 +277,12 @@ section{
 
 }
 
-.about-containers{
+.about-containers {
+    display: flex;
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    /* Remove align-items: stretch here */
 }
 
 .about-details-container{
@@ -302,7 +305,7 @@ section{
     bottom: 2.5rem;
 }
 
-.details-container{
+.details-container {
     padding: 1.5rem;
     flex: 1;
     background: white;
@@ -310,17 +313,25 @@ section{
     border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
     text-align: center;
+    /* Remove display: flex, flex-direction, justify-content, height, min-height here */
 }
 
-.section-container{
-    gap: 4rem;
-    height: 80%;
+/* --- Only target project cards in the projects section --- */
+#projects .about-containers {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
 }
 
-.section__pic-container{
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
+#projects .details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 0;
+}
+
+#projects .btn-container {
+    margin-top: auto;
 }
 
 /* Experience Section*/
